@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@layer theme {
+  :root {
+    --font-family-title: var(--font-quintessential);
+    --font-family-text: var(--font-open-sans);
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-quintessential), serif;
+}
+
+p,
+a,
+span {
+  font-family: var(--font-open-sans), sans-serif;
+}
+
+body {
+  background: url('/media/backSushiBody.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* Questo rende lo sfondo fisso */
+  color: var(--foreground);
+  font-family: var(--font-open-sans), sans-serif;
+  min-height: 100vh;
+  /* Assicura che il body copra tutta l'altezza */
+}

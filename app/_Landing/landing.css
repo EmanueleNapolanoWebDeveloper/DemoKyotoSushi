@@ -1,0 +1,29 @@
+.backgroundIntroHome {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.832)),
+        url('/media/backgroundIntroHome.jpg');
+    ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.backgroundFirstDivider {
+    background: url('/media/sushiset.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.backgroundOpeningHours {
+    background: linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+        url('/media/photoLocation/Photo2.jpg');
+    background-size: cover;
+    background-position: center;
+}

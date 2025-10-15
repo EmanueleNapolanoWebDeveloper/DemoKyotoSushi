@@ -1,0 +1,31 @@
+#navbarContainer {
+    background: url('/media/test.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    /* rimuoviamo il box-shadow precedente e lo sostituiamo con gradienti */
+    overflow: hidden;
+    /* importante per il pseudo-elemento */
+}
+
+/* overlay bianco semi-trasparente su tutta la navbar */
+#navbarContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* patina bianca semi-trasparente */
+    background: rgba(255, 255, 255, 0.445);
+    z-index: 0;
+}
+
+
+/* contenuto sopra gli overlay */
+#navbarContainer>* {
+    position: relative;
+    z-index: 1;
+}
