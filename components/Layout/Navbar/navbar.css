@@ -1,5 +1,5 @@
 #navbarContainer {
-    background: url('/media/test.jpg');
+    background: url('/media/backnavbar.png');
     background-size: cover;
     background-position: center;
     color: rgb(0, 0, 0);
@@ -28,4 +28,28 @@
 #navbarContainer>* {
     position: relative;
     z-index: 1;
+}
+
+.listMenuNavbar {
+    font-family: var(--font-quintessential) !important;
+}
+
+#offCanvasContainer{
+    background:linear-gradient(rgba(9, 9, 9, 0.445), rgba(8, 8, 8, 0.563)), url('/media/backnavbar.png');
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

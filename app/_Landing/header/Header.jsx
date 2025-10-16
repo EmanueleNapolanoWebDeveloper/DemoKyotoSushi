@@ -73,12 +73,13 @@ export default function Header() {
                         </div>
 
                         {/* Parte Immagine */}
-                        <div className={`relative ${slide.position === "right" ? "md:order-1" : ""}`}>
+                        <div className={`relative ${slide.position === "right" ? "md:order-1" : ""} p-2`}>
                             <Image
                                 src={slide.image}
                                 alt={slide.title}
-                                fill
-                                className="object-cover h-96 w-96"
+                                width={1000}
+                                height={1000}
+                                className="object-cover h-full w-full rounded-"
                             />
                         </div>
                     </div>
@@ -93,7 +94,7 @@ export default function Header() {
                         />
                         <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center p-6">
                             <div className="text-center space-y-6">
-                                <div className="text-7xl mb-4 animate-bounce">
+                                <div className="text-7xl mb-4 flex items-center justify-center">
                                     <Image
                                         src={"/media/logoDemoSushinobgwhite.png"}
                                         alt="Logo Kyoto Sushi"

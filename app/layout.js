@@ -2,6 +2,7 @@ import { Open_Sans, Quintessential } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Layout/Navbar/Navbar";
 import Footer from "../components/Layout/Footer/Footer";
+import PageTransition from "../components/Layout/WrapperPagesTransition/Wrapperpagestransition";
 
 
 const quintessential = Quintessential({
@@ -30,7 +31,7 @@ export default function RootLayout({ children }) {
         className={` ${quintessential.variable} ${openSans.variable} antialiased`}
       >
         <Navbar />
-        {children}
+        <PageTransition>{children}</PageTransition>
         <Footer />
       </body>
     </html>

@@ -216,26 +216,26 @@ export default function Location() {
                 viewport={{ once: true, amount: 0.3 }}
             >
                 <motion.h3
-                    className='text-[1.5rem] font-bold text-center'
+                    className='text-[1.5rem] font-bold text-center text-black'
                     variants={paragraphVariants}
                 >
                     Benvenuti da Kuoto Sushi, un luogo dove l'eleganza incontra il gusto autentico del Giappone.
                 </motion.h3>
 
-                <motion.p variants={paragraphVariants}>
+                <motion.p variants={paragraphVariants} className='text-black text-center'>
                     La nostra location è pensata per offrire un'esperienza unica: un ambiente raffinato, curato nei dettagli e avvolto da un'atmosfera rilassante che ti farà dimenticare il caos quotidiano.
                 </motion.p>
 
-                <motion.p variants={paragraphVariants}>
+                <motion.p variants={paragraphVariants} className='text-black text-center'>
                     Appena varchi la soglia, verrai accolto da luci soffuse, profumi di riso e alghe appena preparate, e il suono delicato del sushi che prende forma sotto le mani dei nostri chef.
                     Ogni tavolo è disposto per garantire intimità e comfort, perfetto sia per una cena romantica che per un momento conviviale tra amici o colleghi.
                 </motion.p>
 
-                <motion.p variants={paragraphVariants}>
+                <motion.p variants={paragraphVariants} className='text-black text-center'>
                     Il nostro locale unisce la tradizione giapponese al design contemporaneo: legno naturale, dettagli in bambù, pareti con motivi orientali e una cura minuziosa per l'armonia degli spazi. Durante la bella stagione, potrai anche gustare il tuo sushi preferito nel nostro dehors esterno, ideale per cenare all'aperto in un'atmosfera rilassata.
                 </motion.p>
 
-                <motion.p variants={paragraphVariants}>
+                <motion.p variants={paragraphVariants} className='text-black text-center'>
                     Che tu venga per una pausa pranzo o per una serata speciale, Kyoto Sushi è il posto perfetto per vivere un viaggio nel gusto, tra tradizione e modernità.
                 </motion.p>
             </motion.div>

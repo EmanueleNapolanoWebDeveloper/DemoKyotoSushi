@@ -11,7 +11,7 @@ export default function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 450) {
+            if (window.scrollY > 150) {
                 setIsFixed(true);
             } else if (window.scrollY < 10) {
                 setIsFixed(false);
@@ -34,9 +34,12 @@ export default function Navbar() {
         <>
             <nav
                 className={`grid grid-cols-2 w-full h-[110px] transition-all duration-500 ${isFixed
-                    ? 'fixed top-0 left-0 right-0 animate-fadeIn z-10'
-                    : 'relative'
+                        ? 'fixed top-0 left-0 right-0 z-10 opacity-100'
+                        : 'relative top-0 z-99'
                     }`}
+                style={{
+                    animation: isFixed ? 'fadeIn 0.5s ease-in-out' : 'none'
+                }}
                 id="navbarContainer"
             >
                 {/* logo */}
@@ -78,22 +81,22 @@ export default function Navbar() {
                 {/* Links Desktop */}
                 <div className="hidden lg:flex col-span-1 items-center justify-center gap-3">
                     <ul className="flex items-center justify-center gap-6">
-                        <li className="text-black font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer">
-                            <Link href="/">Home</Link>
+                        <li className="text-black font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer listMenuVanvar">
+                            <Link href="/"><h6>Home</h6></Link>
                         </li>
-                        <li className="text-black font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer">
-                            <Link href="/location">Location</Link>
+                        <li className="text-black font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer listMenuVanvar">
+                            <Link href="/location"><h6>Location</h6></Link>
 
                         </li>
-                        <li className="text-black font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer">
-                            <Link href="/servizi">Servizi</Link>
+                        <li className="text-black font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer listMenuVanvar">
+                            <Link href="/servizi"><h6>Servizi</h6></Link>
 
                         </li>
-                        <li className="text-black font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer">
-                            <Link href="/allyoucaneat">All You Can Eat</Link>
+                        <li className="text-black font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer listMenuVanvar">
+                            <Link href="/allyoucaneat"><h6>All You Can Eat</h6></Link>
                         </li>
-                        <li className="text-black font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer">
-                            <Link href="#footerContatti">Contatti</Link>
+                        <li className="text-black font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer listMenuVanvar">
+                            <Link href="#footerContatti"><h6>Contatti</h6></Link>
                         </li>
                     </ul>
                 </div>
@@ -101,38 +104,45 @@ export default function Navbar() {
 
             {/* Offcanvas Menu - Mobile */}
             <div
-                className={`lg:hidden fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${isOpen ? 'translate-x-0' : 'translate-x-full'
-                    }`}
+                className={`lg:hidden fixed top-0 right-0 h-full w-80 shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${isOpen ? 'translate-x-0' : 'translate-x-full'
+                    }`} id="offCanvasContainer"
             >
+                <Image
+                    src="/media/logoDemoSushinobgwhite.png"
+                    alt="logo"
+                    width={100}
+                    height={100}
+                    className='ml-5 mt-5'
+                />
                 <div className="flex flex-col items-start justify-start p-8 mt-20">
-                    <ul className="flex flex-col gap-6 w-full">
+                    <ul className="flex flex-col gap-6 w-fullmt-5">
                         <li
                             onClick={closeMenu}
-                            className="text-black text-xl font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer border-b border-gray-200 pb-4"
+                            className="text-white text-xl font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer border-b border-gray-200 pb-4"
                         >
                             <Link href="/">Home</Link>
                         </li>
                         <li
                             onClick={closeMenu}
-                            className="text-black text-xl font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer border-b border-gray-200 pb-4"
+                            className="text-white text-xl font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer border-b border-gray-200 pb-4"
                         >
                             <Link href="/location">Location</Link>
                         </li>
                         <li
                             onClick={closeMenu}
-                            className="text-black text-xl font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer border-b border-gray-200 pb-4"
+                            className="text-white text-xl font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer border-b border-gray-200 pb-4"
                         >
                             <Link href="/servizi">Servizi</Link>
                         </li>
                         <li
                             onClick={closeMenu}
-                            className="text-black text-xl font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer border-b border-gray-200 pb-4"
+                            className="text-white text-xl font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer border-b border-gray-200 pb-4"
                         >
                             <Link href="/allyoucaneat">All You Can Eat</Link>
                         </li>
                         <li
                             onClick={closeMenu}
-                            className="text-black text-xl font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer"
+                            className="text-white text-xl font-semibold transition-colors duration-300 hover:text-pink-500 cursor-pointer"
                         >
                             <Link href="#footerContatti">Contatti</Link>
                         </li>
